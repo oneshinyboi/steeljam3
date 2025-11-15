@@ -13,9 +13,8 @@ public class CloudMover : MonoBehaviour
     {
         float zSpeed = -baseSpeed + Random.Range(-speedVariation, speedVariation);
         float xSpeed = Random.Range(-lateralVariation, lateralVariation);
-        float ySpeed = Random.Range(-lateralVariation, lateralVariation);
 
-        velocity = new Vector3(xSpeed, ySpeed, zSpeed);
+        velocity = new Vector3(xSpeed, 0, zSpeed);
 
         Destroy(gameObject, 30f); // Despawn after 30 seconds
     }
