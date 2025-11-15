@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47152567, y: 0.4934944, z: 0.73140955}
-  m_Center: {x: -0.0031546354, y: 0.21438408, z: -1.1612594}
+  m_Size: {x: 0.47152567, y: 0.47583634, z: 0.7985555}
+  m_Center: {x: -0.0031546354, y: 0.2232131, z: -0.015232027}
 --- !u!114 &61848886972531806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::enemyCarAI
   minBackwardVelocity: 5
   maxBackwardVelocity: 4
-  laneChangeChance: 0.02
+  laneChangeChance: 0.001
   laneChangeSpeed: 2
 --- !u!1001 &7375231562917795858
 PrefabInstance:
@@ -81,15 +81,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 528d2fbe9380ad239aa96239700a3dfc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 528d2fbe9380ad239aa96239700a3dfc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 528d2fbe9380ad239aa96239700a3dfc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 528d2fbe9380ad239aa96239700a3dfc, type: 3}
       propertyPath: m_LocalPosition.x
