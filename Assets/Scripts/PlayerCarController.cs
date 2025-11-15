@@ -27,13 +27,15 @@ public class PlayerCarController : MonoBehaviour
         }
 
         var position = transform.position;
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             position.x += Time.deltaTime * velocity;
+            Debug.Log("blah");
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             position.x += Time.deltaTime * -velocity;
+            Debug.Log("blah");
         }
 
         position.x = Mathf.Clamp(position.x, minX, maxX);
