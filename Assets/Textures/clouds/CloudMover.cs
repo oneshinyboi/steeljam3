@@ -24,4 +24,22 @@ public class CloudMover : MonoBehaviour
     {
         transform.position += velocity * Time.deltaTime;
     }
+
+    // LateUpdate ensures billboard rotation happens after camera movement
+    void LateUpdate()
+    {
+        if (Camera.main != null)
+        {
+            // Make the cloud face the camera only on Y-axis rotation
+            Vector3 directionToCamera = Camera.main.transform.position - transform.position;
+            directionToCamera.y = 0; // Keep clouds upright by ignoring y-axis rotation
+
+            if (directionToCamera != Vector3.zero)
+            {
+                // Only rotate around Y-axis to face camera horizontally
+                float yRotation = Mathf.Atan2(directionToCamera.x, directionToCamera.z) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, yRotation, 0);
+            }
+        }
+    }
 }

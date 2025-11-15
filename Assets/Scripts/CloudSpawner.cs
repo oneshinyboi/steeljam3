@@ -12,8 +12,8 @@ public class CloudSpawner : MonoBehaviour
     // The area where clouds can spawn
     public float minX = -10f;
     public float maxX = 10f;
-    public float minY = 20f;
-    public float maxY = 30f;
+    public float minZ = 20f;
+    public float maxZ = 30f;
 
     // Minimum and maximum spawn interval (in seconds)
     public float minSpawnInterval = 0.1f;
@@ -52,8 +52,8 @@ public class CloudSpawner : MonoBehaviour
 
         // 2. Pick a random position within the defined spawn area
         float randomX = Random.Range(minX, maxX);
-        float randomY = Random.Range(minY, maxY);
-        Vector3 spawnPosition = new Vector3(randomX, 3, randomY);
+        float randomZ = Random.Range(minZ, maxZ);
+        Vector3 spawnPosition = new Vector3(randomX, 3, randomZ);
 
         // 3. Create an instance of the cloud prefab at that position
         GameObject newCloud = Instantiate(cloudPrefab, spawnPosition, Quaternion.identity);
