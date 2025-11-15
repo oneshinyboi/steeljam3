@@ -15,10 +15,18 @@ public class CloudSpawner : MonoBehaviour
     public float minY = 20f;
     public float maxY = 30f;
 
-    // How often to spawn a new cloud (in seconds)
-    public float spawnInterval = 0.3f;
+    // Minimum and maximum spawn interval (in seconds)
+    public float minSpawnInterval = 0.1f;
+    public float maxSpawnInterval = 1.0f;
 
+    private float spawnInterval;
     private float timer;
+
+    void Start()
+    {
+        // Initialize spawnInterval to a random value within the range
+        spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+    }
 
     void Update()
     {
@@ -31,6 +39,8 @@ public class CloudSpawner : MonoBehaviour
             SpawnCloud();
             // Reset the timer
             timer = 0;
+            // Set spawnInterval to a new random value within the range
+            spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
         }
     }
 
