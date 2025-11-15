@@ -255,6 +255,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198797121}
+  - component: {fileID: 198797122}
+  - component: {fileID: 198797123}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -271,13 +273,49 @@ Transform:
   m_GameObject: {fileID: 198797120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.29407, y: 0, z: 0.62894}
+  m_LocalPosition: {x: -0.076, y: 0.42, z: -3.577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 710389363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198797122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198797120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f524f3a8e3af9f9879c9bbc9a75910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCarController
+  velocity: 2
+  minX: -0.62
+  maxX: 0.62
+--- !u!65 &198797123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198797120}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.386281, y: 0.35016474, z: 0.5128794}
+  m_Center: {x: 0.01470387, y: -0.18469436, z: -1.0809062}
 --- !u!1 &333657557
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +364,8 @@ MonoBehaviour:
   maxX: 10
   minY: 2
   maxY: 5
-  spawnInterval: 0.5
+  minSpawnInterval: 0.1
+  maxSpawnInterval: 1
 --- !u!4 &333657559
 Transform:
   m_ObjectHideFlags: 0
@@ -337,6 +376,56 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35898, y: 0.05, z: -4.24021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &388888104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388888106}
+  - component: {fileID: 388888105}
+  m_Layer: 0
+  m_Name: enemyCarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &388888105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388888104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d996fc4074cd6461d88e1615f845adb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyCars.EnemyCarSpawner
+  cars:
+  - {fileID: 1706858472418793123, guid: a0729bdd4e30b85efa2a0226201c0579, type: 3}
+  - {fileID: 4013116804624185940, guid: a5428db6878616e569e0f8bbcb1d9b16, type: 3}
+  minSpawnInterval: 1
+  maxSpawnInterval: 3
+  carSpawnZPosition: 15
+--- !u!4 &388888106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388888104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13801, y: 0, z: -3.90779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -675,7 +764,7 @@ Transform:
   m_GameObject: {fileID: 710389359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.33407, y: 0.57, z: -3.0289402}
+  m_LocalPosition: {x: 0, y: -0.181, z: -1.095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -922,6 +1011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623855118}
   - component: {fileID: 1623855119}
+  - component: {fileID: 1623855120}
   m_Layer: 0
   m_Name: RoadManager
   m_TagString: Untagged
@@ -959,6 +1049,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoadTextureScroll
   roadRenderer: {fileID: 2021764868}
   scrollSpeed: 0.5
+--- !u!114 &1623855120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623855117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bacd33f0b8d479fabe7725c71db795b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.RoadInfo
+  laneXPositions:
+  - -0.62
+  - 0
+  - 0.62
+  laneDistance: 0
 --- !u!1 &1653438024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,3 +1227,4 @@ SceneRoots:
   - {fileID: 333657559}
   - {fileID: 895482234}
   - {fileID: 1653438027}
+  - {fileID: 388888106}
