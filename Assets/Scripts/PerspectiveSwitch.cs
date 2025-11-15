@@ -3,6 +3,7 @@ using UnityEngine;
 public class PerspectiveSwitch : MonoBehaviour
 {
     public GameObject[] views;
+    public float[] rotations;
     public int currentIndex = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,5 +33,7 @@ public class PerspectiveSwitch : MonoBehaviour
         {
             views[i].SetActive(i == index);
         }
+        Camera.main.transform.rotation = Quaternion.Euler(0, rotations[index], 0);
+
     }
 }
