@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\PlayGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\CarLockPuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Puzzles\\CarLockPuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\PuzzleIconController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Puzzles\\PuzzleIconController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\FuseSliderPuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Puzzles\\FuseSliderPuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\BasePuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Puzzles\\BasePuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Puzzles\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayGame.cs",
-              "DocumentMoniker": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\PlayGame.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayGame.cs",
-              "ToolTip": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\PlayGame.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "DocumentIndex": 2,
+              "Title": "FuseSliderPuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\FuseSliderPuzzle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\FuseSliderPuzzle.cs",
+              "ToolTip": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\FuseSliderPuzzle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\FuseSliderPuzzle.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAFAAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T17:32:15.748Z",
+              "WhenOpened": "2025-11-15T20:39:30.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PuzzleManager.cs",
+              "DocumentMoniker": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "ToolTip": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAADIAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T20:31:49.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CarLockPuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\CarLockPuzzle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\CarLockPuzzle.cs",
+              "ToolTip": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\CarLockPuzzle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\CarLockPuzzle.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T20:30:16.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PuzzleIconController.cs",
+              "DocumentMoniker": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\PuzzleIconController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\PuzzleIconController.cs",
+              "ToolTip": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\PuzzleIconController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\PuzzleIconController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T20:24:55.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BasePuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\BasePuzzle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\BasePuzzle.cs",
+              "ToolTip": "C:\\Users\\reece\\OneDrive\\Documents\\GitHub\\steeljam3\\Assets\\Scripts\\Puzzles\\BasePuzzle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\BasePuzzle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T19:16:54.114Z",
               "EditorCaption": ""
             }
           ]
