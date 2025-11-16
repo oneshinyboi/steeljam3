@@ -45,7 +45,7 @@ public class InfiniteScrollingBuildings : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            z += Random.Range(minSpacing, maxSpacing);
+            z -= Random.Range(minSpacing, maxSpacing);
 
             bool leftSide = Random.value < 0.5f;
             float x = leftSide ? leftX : rightX;
@@ -96,6 +96,7 @@ public class InfiniteScrollingBuildings : MonoBehaviour
                 float x = leftSide ? leftX : rightX;
 
                 targetScales[i] = Random.Range(0.8f, 1.3f);
+                t.localScale = Vector3.zero;
                 t.position = new Vector3(x, t.position.y, newZ);
 
                 // Randomize again so it doesn't feel copy-pasted

@@ -4,13 +4,15 @@ public class PerspectiveSwitch : MonoBehaviour
 {
     public GameObject[] views;
     public float[] rotations;
+
+    public GameObject gameOverScreen;
     private int currentIndex = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         PlayerCarController.current.PlayerDied += GameOverScreen;
-
+        gameOverScreen.SetActive(false);
         // Ensure only the first object starts active
         SetActiveObject(currentIndex);
     }
@@ -19,7 +21,8 @@ public class PerspectiveSwitch : MonoBehaviour
     {
         PlayerCarController.current.PlayerDied -= GameOverScreen;
         Time.timeScale = 0;
-        SetActiveObject(2);
+        DisableAllViews();
+        gameOverScreen.SetActive(true);
     }
 
 
@@ -44,5 +47,13 @@ public class PerspectiveSwitch : MonoBehaviour
         }
         Camera.main.transform.rotation = Quaternion.Euler(0, rotations[index], 0);
 
+    }
+
+    void DisableAllViews()
+    {
+        for (int i = 0; i < views.Length; i++)
+        {
+            views[i].SetActive(false);
+        }
     }
 }
