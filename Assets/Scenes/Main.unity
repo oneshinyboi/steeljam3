@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 154476849}
   - component: {fileID: 154476848}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Sunlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -254,7 +254,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 6
+  m_BounceIntensity: 4
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -274,12 +274,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154476847}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.953717, z: 0.30070576, w: 0}
-  m_LocalPosition: {x: 0, y: 10, z: 35}
+  m_LocalRotation: {x: -0, y: -0.953717, z: 0.30070576, w: 0}
+  m_LocalPosition: {x: -51.81655, y: 6.5, z: -19.390049}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 446154419}
   m_LocalEulerAnglesHint: {x: 35, y: -180, z: 0}
 --- !u!1 &198797120
 GameObject:
@@ -569,6 +569,39 @@ RectTransform:
   m_AnchoredPosition: {x: 226, y: -58}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &446154418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446154419}
+  m_Layer: 0
+  m_Name: Lighting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446154419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446154418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53.02655, y: 0, z: 49.39005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 549309337}
+  - {fileID: 154476850}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461893397
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +689,7 @@ GameObject:
   - component: {fileID: 549309336}
   - component: {fileID: 549309335}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Backlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,14 +734,14 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.9303958, b: 0.740566, a: 1}
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -765,11 +798,11 @@ Transform:
   m_GameObject: {fileID: 549309334}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -53.02655, y: 3, z: -49.39005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 446154419}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &710389359
 GameObject:
@@ -1462,7 +1495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634412673}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 6.47, z: 70}
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1801,8 +1834,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 549309337}
-  - {fileID: 154476850}
+  - {fileID: 446154419}
+  - {fileID: 1634412675}
   - {fileID: 198797121}
   - {fileID: 1623855118}
   - {fileID: 333657559}
@@ -1811,4 +1844,3 @@ SceneRoots:
   - {fileID: 388888106}
   - {fileID: 1209256036}
   - {fileID: 380302126}
-  - {fileID: 1634412675}
