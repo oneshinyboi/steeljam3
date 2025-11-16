@@ -7,6 +7,7 @@ namespace DefaultNamespace
     {
         public static RoadInfo current;
         public float[] laneXPositions;
+        public float roadEndZ;
         public float laneDistance;
 
         private void Awake()

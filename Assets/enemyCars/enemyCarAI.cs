@@ -10,13 +10,19 @@ public class enemyCarAI : MonoBehaviour
     public float laneChangeChance = 0.02f; // Chance per frame to attempt lane change
     public float laneChangeSpeed = 2f;
 
+    private float scaleTime = 0.5f;
+
     private float currentVelocity;
     private int currentLaneIndex;
     private bool isChangingLanes = false;
     private float targetXPosition;
 
+    private float spawnTime;
+
+
     void Start()
     {
+        spawnTime = Time.fixedTime;
         // Set random backward velocity
         currentVelocity = Random.Range(minBackwardVelocity, maxBackwardVelocity);
 
@@ -26,7 +32,13 @@ public class enemyCarAI : MonoBehaviour
 
     void Update()
     {
+        transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, (Time.fixedTime - spawnTime) / scaleTime);
+        if (transform.position.z < RoadInfo.current.roadEndZ)
+        {
+            Destroy(transform.gameObject);
+        }
         // Move backward along Z-axis
+        IsCarInFront();
         transform.Translate(0, 0, -currentVelocity * Time.deltaTime);
 
         // Handle lane changing
@@ -54,6 +66,24 @@ public class enemyCarAI : MonoBehaviour
                 currentLaneIndex = i;
             }
         }
+    }
+
+    void IsCarInFront()
+    {
+        Vector3 rayOrigin = transform.position;
+        Vector3 rayDirection = Vector3.forward; // Forward direction in world space
+        float rayDistance = RoadInfo.current.laneDistance;
+
+        if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, rayDistance))
+        {
+            if (hit.collider.gameObject.GetComponent<enemyCarAI>() is { } carAI)
+            {
+                currentVelocity = carAI.currentVelocity;
+                return;
+            }
+        }
+
+        currentVelocity = Random.Range(minBackwardVelocity, maxBackwardVelocity);
     }
 
     void AttemptLaneChange()

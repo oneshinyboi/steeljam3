@@ -1,4 +1,7 @@
+using System;
+using DefaultNamespace;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class InfiniteScrollingBuildings : MonoBehaviour
 {
@@ -18,12 +21,23 @@ public class InfiniteScrollingBuildings : MonoBehaviour
 
     [Header("Scrolling")]
     public float scrollSpeed = 10f;        // How fast the world moves towards the camera
-    public float despawnZ = -30f;          // When a building passes this Z, recycle it
+    private float despawnZ; // When a building passes this Z, recycle it
+
+    public float buildingPopInTime;
+    private float[] recycleTime;
+    private float[] targetScales;
 
     private Transform[] pool;
 
+    private void Awake()
+    {
+        recycleTime = new float[poolSize];
+        targetScales = new float[poolSize];
+    }
+
     void Start()
     {
+        despawnZ = RoadInfo.current.roadEndZ;
         pool = new Transform[poolSize];
 
         // Start spawning a bit in front of the camera
@@ -57,6 +71,10 @@ public class InfiniteScrollingBuildings : MonoBehaviour
         for (int i = 0; i < pool.Length; i++)
         {
             Transform t = pool[i];
+
+            t.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * targetScales[i],
+                (Time.fixedTime - recycleTime[i]) / buildingPopInTime);
+
             // Move all buildings towards the camera (negative Z)
             t.position += new Vector3(0f, 0f, -moveAmount);
 
@@ -71,16 +89,17 @@ public class InfiniteScrollingBuildings : MonoBehaviour
 
             if (t.position.z < despawnZ)
             {
+                recycleTime[i] = Time.fixedTime;
+
                 float newZ = maxZ + Random.Range(minSpacing, maxSpacing);
                 bool leftSide = Random.value < 0.5f;
                 float x = leftSide ? leftX : rightX;
 
+                targetScales[i] = Random.Range(0.8f, 1.3f);
                 t.position = new Vector3(x, t.position.y, newZ);
 
                 // Randomize again so it doesn't feel copy-pasted
                 t.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-                float randomScale = Random.Range(0.8f, 1.3f);
-                t.localScale = Vector3.one * randomScale;
             }
         }
     }

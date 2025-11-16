@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerCarController : MonoBehaviour
@@ -6,6 +8,14 @@ public class PlayerCarController : MonoBehaviour
     public float minX = -10.0f;
     public float maxX = 10.0f;
     private Collider selfCollider;
+
+    public static PlayerCarController current;
+    public event Action PlayerDied;
+
+    private void Awake()
+    {
+        current = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +33,7 @@ public class PlayerCarController : MonoBehaviour
             if (hitCollider != selfCollider) // Don't detect collision with self
             {
                 Debug.Log($"Player car collided with: {hitCollider.gameObject.name}");
+                PlayerDied?.Invoke();
             }
         }
 
@@ -30,12 +41,10 @@ public class PlayerCarController : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             position.x += Time.deltaTime * velocity;
-            Debug.Log("blah");
         }
         else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             position.x += Time.deltaTime * -velocity;
-            Debug.Log("blah");
         }
 
         position.x = Mathf.Clamp(position.x, minX, maxX);
