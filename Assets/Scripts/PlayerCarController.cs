@@ -33,7 +33,7 @@ public class PlayerCarController : MonoBehaviour
             if (hitCollider != selfCollider) // Don't detect collision with self
             {
                 Debug.Log($"Player car collided with: {hitCollider.gameObject.name}");
-                PlayerDied?.Invoke();
+                //PlayerDied?.Invoke();
             }
         }
 

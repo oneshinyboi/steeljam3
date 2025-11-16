@@ -27,7 +27,7 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: b6ee540d77b3d8b439e53e2f487561d5, type: 3}
-        m_Scale: {x: 5, y: 20}
+        m_Scale: {x: 5, y: 30}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
@@ -35,7 +35,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: b6ee540d77b3d8b439e53e2f487561d5, type: 3}
-        m_Scale: {x: 5, y: 20}
+        m_Scale: {x: 5, y: 30}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
