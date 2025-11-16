@@ -46,7 +46,7 @@ public class enemyCarAI : MonoBehaviour
         {
             MoveBetweenLanes();
         }
-        else if (Random.value < laneChangeChance)
+        else if (Random.value < laneChangeChance && Mathf.Abs(transform.position.z - PlayerCarController.current.gameObject.transform.position.z) > 2.5)
         {
             AttemptLaneChange();
         }
