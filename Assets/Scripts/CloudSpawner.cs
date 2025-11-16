@@ -53,7 +53,7 @@ public class CloudSpawner : MonoBehaviour
         // 2. Pick a random position within the defined spawn area
         float randomX = Random.Range(minX, maxX);
         float randomZ = Random.Range(minZ, maxZ);
-        Vector3 spawnPosition = new Vector3(randomX, 3, randomZ);
+        Vector3 spawnPosition = new Vector3(randomX, 4, randomZ);
 
         // 3. Create an instance of the cloud prefab at that position
         GameObject newCloud = Instantiate(cloudPrefab, spawnPosition, Quaternion.identity);
