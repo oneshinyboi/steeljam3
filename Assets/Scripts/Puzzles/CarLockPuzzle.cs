@@ -37,6 +37,10 @@ public class CarLockPuzzle : MonoBehaviour
     public void Increment(int index)
     {
         locks[index].currentValue += 1;
+        if (locks[index].currentValue == 11)
+        {
+            locks[index].currentValue = 0;
+        }
         locks[index].display.SetText(locks[index].currentValue.ToString());
         CheckIfSolved();
     }
@@ -44,6 +48,10 @@ public class CarLockPuzzle : MonoBehaviour
     public void Decrement(int index)
     {
         locks[index].currentValue -= 1;
+        if (locks[index].currentValue == -1)
+        {
+            locks[index].currentValue = 10;
+        }
         locks[index].display.SetText(locks[index].currentValue.ToString());
         CheckIfSolved();
 

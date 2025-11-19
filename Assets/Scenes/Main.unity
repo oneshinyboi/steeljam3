@@ -1490,7 +1490,7 @@ MonoBehaviour:
   - {fileID: 4013116804624185940, guid: a5428db6878616e569e0f8bbcb1d9b16, type: 3}
   - {fileID: 4013116804624185940, guid: 26a2f5798ec296fe68fc89c34f2bceaf, type: 3}
   minSpawnInterval: 1
-  maxSpawnInterval: 3
+  maxSpawnInterval: 1.5
   carSpawnZPosition: 15
 --- !u!4 &388888106
 Transform:
@@ -3016,10 +3016,10 @@ RectTransform:
   - {fileID: 1115593862}
   m_Father: {fileID: 895482234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973198787
 MonoBehaviour:
@@ -3491,7 +3491,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 2630632047848414263}]
+  m_Children:
+  - {fileID: 2630632047848414263}
   m_Father: {fileID: 973198786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4482,7 +4483,7 @@ PrefabInstance:
       value: road-dirt-pavement
       objectReference: {fileID: 0}
     - target: {fileID: 3622273136783886291, guid: 3057559694c60d94b9fc5e1606d376aa, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b606649ce8a09844795491a86c3e0125, type: 2}
     m_RemovedComponents: []
@@ -5021,7 +5022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2026446984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5334,7 +5335,7 @@ PrefabInstance:
       value: road-dirt-pavement (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3622273136783886291, guid: 3057559694c60d94b9fc5e1606d376aa, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b606649ce8a09844795491a86c3e0125, type: 2}
     m_RemovedComponents: []
