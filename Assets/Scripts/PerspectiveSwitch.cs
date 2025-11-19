@@ -1,12 +1,22 @@
+using System;
 using UnityEngine;
 
 public class PerspectiveSwitch : MonoBehaviour
 {
+    public static PerspectiveSwitch current;
     public GameObject[] views;
     public float[] rotations;
 
+
     public GameObject gameOverScreen;
+    public GameObject winScreen;
+
     private int currentIndex = 0;
+
+    private void Awake()
+    {
+        current = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +33,13 @@ public class PerspectiveSwitch : MonoBehaviour
         Time.timeScale = 0;
         DisableAllViews();
         gameOverScreen.SetActive(true);
+    }
+
+    public void Win()
+    {
+        Time.timeScale = 0;
+        DisableAllViews();
+        winScreen.SetActive(true);
     }
 
 
